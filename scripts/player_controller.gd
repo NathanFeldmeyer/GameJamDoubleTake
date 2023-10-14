@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-var speed: int = 400
-var jump_speed: int = 200
-var gravity: int = 200
+var speed: int = 300
+var jump_speed: int = 250
+var gravity: int = 400
 
 func get_input(delta):
 	velocity.x = 0
