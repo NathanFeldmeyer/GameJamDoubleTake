@@ -1,9 +1,8 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var speed: int = 400
 var jump_speed: int = 200
 var gravity: int = 200
-var velocity = Vector2()
 
 func get_input(delta):
 	velocity.x = 0
@@ -17,7 +16,10 @@ func get_input(delta):
 	
 	# gravity
 	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	velocity = velocity
 	pass
 
 func _physics_process(delta):

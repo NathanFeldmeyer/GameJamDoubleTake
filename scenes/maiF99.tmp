@@ -157,7 +157,7 @@ layer_0/tile_data = PackedInt32Array(-131069, 1, 0, 65522, 1, 0, 65523, 1, 0, 65
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
-zoom = Vector2(2, 2)
+zoom = Vector2(0.3, 0.3)
 
 [node name="player" parent="." instance=ExtResource("2")]
 position = Vector2(-143, -25)
