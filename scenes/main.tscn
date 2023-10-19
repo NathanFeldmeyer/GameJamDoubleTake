@@ -158,8 +158,8 @@ layer_0/tile_data = PackedInt32Array(-131069, 1, 0, 65522, 1, 0, 65523, 1, 0, 65
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-143, -25)
-offset = Vector2(0, -60)
-zoom = Vector2(2, 2)
+offset = Vector2(0, -40)
+zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
