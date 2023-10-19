@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=8 format=3 uid="uid://dhvjs30pt72rq"]
 
 [ext_resource type="Texture2D" uid="uid://bfik4p0oa7p6a" path="res://assets/Terrain/Terrain (16x16).png" id="1"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
@@ -148,14 +148,6 @@ sources/1 = SubResource("TileSetAtlasSource_w1wyt")
 sources/2 = SubResource("TileSetAtlasSource_0pkg6")
 sources/3 = SubResource("TileSetAtlasSource_yiwoj")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_iy0mg"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}]
-
 [node name="main" type="Node2D"]
 metadata/_edit_vertical_guides_ = [292.0]
 
@@ -179,7 +171,3 @@ position = Vector2(-143, -25)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="player"]
 remote_path = NodePath("../../Camera2D")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
-sprite_frames = SubResource("SpriteFrames_iy0mg")
-animation = &"idle"
