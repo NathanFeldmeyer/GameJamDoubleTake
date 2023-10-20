@@ -8,9 +8,13 @@ extends CharacterBody2D
 var is_moving: bool = false
 var was_in_air : bool = false
 var animation_lock: bool = false
+var current_health: int = 3
+var fallThresholdY = 500
+var starting_position = Vector2(0, 0)
 
 func _ready():
-	anim.play("Idle")  # Start with the "Idle" animation
+	anim.play("Idle")  # Start with the "Idle" animation	
+	starting_position = position
 
 func get_input(delta):
 	velocity.x = 0
@@ -46,22 +50,31 @@ func _physics_process(delta):
 	get_input(delta)
 	
 	var direction = Input.get_axis("move_left", "move_right")
-
+	var playerY = position.y
+	
 	# Rotate
 	if direction == 1:
 		anim.flip_h = false
 	elif direction == -1:
 		anim.flip_h = true
+		
+	if playerY < fallThresholdY: 
+		lose_life()
 
 func jump():
 	velocity.y -= JUMP_FORCE
 	anim.play("jump")
 	animation_lock = true
 
-
 #func land():
 		#anim.play("jump end")
 
-
-
-
+func lose_life(): 
+	current_health -= 1
+	if current_health >= 0: 
+		position = starting_position
+		print_debug("respawned!")
+	
+#func respawn():
+	#if current_health >= 0:
+		#position = starting_position
