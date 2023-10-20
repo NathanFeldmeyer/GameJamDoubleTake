@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=9 format=3 uid="uid://dhvjs30pt72rq"]
 
 [ext_resource type="Texture2D" uid="uid://bfik4p0oa7p6a" path="res://assets/Terrain/Terrain (16x16).png" id="1"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://cterpfhoojeud" path="res://assets/lessthan3.png" id="3_g7b76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynqgs"]
 texture = ExtResource("1")
@@ -171,3 +172,24 @@ position = Vector2(-143, -25)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="player"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 21.0
+scale = Vector2(5, 5)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 45.0
+offset_bottom = 12.0
+texture = ExtResource("3_g7b76")
+expand_mode = 1
+stretch_mode = 1
