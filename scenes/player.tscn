@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://crpem6jmtm72h"]
+[gd_scene load_steps=25 format=3 uid="uid://crpem6jmtm72h"]
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bn3i3y8l4qy5o" path="res://assets/player-Sheet.png" id="3_qwbad"]
@@ -14,10 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://0yar1xdnofvm" path="res://assets/jumpfull/jump_full9.png" id="13_04tb5"]
 [ext_resource type="Texture2D" uid="uid://d0mjouqekv4np" path="res://assets/jumpfull/jump_full6.png" id="13_30cns"]
 [ext_resource type="Texture2D" uid="uid://ugsrsk5vbr1" path="res://assets/jumpfull/jump_full10.png" id="14_nwnl5"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58oyh"]
-radius = 5.0
-height = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yd0tt"]
 atlas = ExtResource("3_qwbad")
@@ -148,13 +144,6 @@ size = Vector2(14, 26)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("2")
-
-[node name="Area2D" type="Area2D" parent="."]
-monitoring = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 0)
-shape = SubResource("CapsuleShape2D_58oyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-14, -14)
