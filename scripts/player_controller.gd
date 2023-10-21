@@ -34,7 +34,7 @@ func get_input(delta):
 			anim.play("Idle")
 			
 
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_just_pressed("jump"):
 		if (is_on_floor()):
 			jump()
 			
@@ -64,7 +64,7 @@ func _physics_process(delta):
 func jump():
 	velocity.y -= JUMP_FORCE
 	anim.play("jump")
-	animation_lock = true
+
 
 #func land():
 		#anim.play("jump end")
