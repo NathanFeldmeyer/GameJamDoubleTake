@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://02tgbnynhspj"
+path="res://.godot/imported/carenemy.mp3-c16bfc21a1275c31bc416fb2f5919bad.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/carenemy.mp3"
+dest_files=["res://.godot/imported/carenemy.mp3-c16bfc21a1275c31bc416fb2f5919bad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
