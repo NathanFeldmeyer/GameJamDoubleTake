@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 CurrentHealth="*res://scripts/current_health.gd"
 Events="*res://scripts/Events.gd"
+Collectable="*res://scripts/Collectable.gd"
 
 [display]
 

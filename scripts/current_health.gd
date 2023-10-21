@@ -1,6 +1,7 @@
 extends Node
 
 signal healthChanged
+var collectable = preload("res://scripts/Collectable.gd")
 
 var max_hearts: int = 3
 var hearts: int = max_hearts
