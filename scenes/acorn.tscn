@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://ce82qor6grhwv"]
+
+[ext_resource type="Script" path="res://scripts/Acorn.gd" id="1_ymvrp"]
+[ext_resource type="Texture2D" uid="uid://bj7njyag267ry" path="res://assets/collected-anim-Sheet.png" id="2_x627v"]
+[ext_resource type="Texture2D" uid="uid://cfl65pvyeepae" path="res://assets/acorn-collectable-Sheet.png" id="3_begcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loasn"]
+atlas = ExtResource("2_x627v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mhdi"]
+atlas = ExtResource("2_x627v")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oon4p"]
+atlas = ExtResource("2_x627v")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8uam"]
+atlas = ExtResource("2_x627v")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2qur"]
+atlas = ExtResource("2_x627v")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erlmn"]
+atlas = ExtResource("3_begcv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afpxi"]
+atlas = ExtResource("3_begcv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6pyg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loasn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mhdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oon4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8uam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2qur")
+}],
+"loop": false,
+"name": &"Collected",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erlmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afpxi")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3bi6"]
+size = Vector2(14, 15)
+
+[node name="Acorn" type="Area2D" groups=["Acorns"]]
+script = ExtResource("1_ymvrp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e6pyg")
+animation = &"Collected"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_q3bi6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
