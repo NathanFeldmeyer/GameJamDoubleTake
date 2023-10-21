@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var level_completed = $UI/LevelCompleted
 @onready var heartscontainer = $UI/hearts_container
+@onready var timer = $UI/timer
 @onready var player = $player
 
 func _ready():
@@ -10,6 +11,14 @@ func _ready():
 	CurrentHealth.healthChanged.connect(heartscontainer.update_hearts)
 	RenderingServer.set_default_clear_color(Color.DARK_SLATE_BLUE)
 	Events.level_completed.connect(show_level_completed)
+	Events.use_timer.connect(set_timer)
+	Events.timer_stop.connect(timer_idle)
 	
 func show_level_completed():
 	level_completed.show()
+
+func set_timer():
+	timer.tick()
+
+func timer_idle():
+	timer.idle()

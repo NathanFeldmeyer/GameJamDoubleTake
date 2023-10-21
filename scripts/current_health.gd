@@ -9,7 +9,8 @@ func damage():
 	hearts -= 1
 	print_debug(hearts)
 	
-	if hearts < 0: 
+	if hearts == 0: 
 		hearts = max_hearts
+		get_tree().reload_current_scene()
 		
 	healthChanged.emit(hearts)

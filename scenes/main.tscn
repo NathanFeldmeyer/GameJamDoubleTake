@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=15 format=3 uid="uid://dhvjs30pt72rq"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7d8kx"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://dc7gsy2ol3m5g" path="res://scenes/hearts_container.tscn" id="3_ajxsp"]
 [ext_resource type="Texture2D" uid="uid://du2yihjknen67" path="res://assets/background/bg-160px-sky.png" id="4_22uhj"]
+[ext_resource type="PackedScene" uid="uid://pfjs62hg367i" path="res://scenes/timer.tscn" id="4_hslch"]
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="4_j1s2n"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="4_ladsa"]
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="5_ah076"]
@@ -130,6 +131,15 @@ offset_left = 5.0
 offset_top = 5.0
 offset_right = 48.0
 offset_bottom = 16.0
+
+[node name="timer" parent="UI" instance=ExtResource("4_hslch")]
+position = Vector2(12, 26)
+
+[node name="Countdown" type="Label" parent="UI"]
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 62.0
+offset_bottom = 40.0
 
 [node name="player" parent="." instance=ExtResource("2")]
 position = Vector2(160, 121)

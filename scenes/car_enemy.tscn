@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dulw5lh7a3jga"]
+[gd_scene load_steps=10 format=3 uid="uid://dulw5lh7a3jga"]
 
 [ext_resource type="Texture2D" uid="uid://dkfa0hmjotrax" path="res://assets/red-car-Sheet.png" id="1_d4tdy"]
 [ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_nfta2"]
@@ -47,9 +47,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m17lm"]
-size = Vector2(32, 23)
-
 [node name="Car Enemy" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_nfta2")
@@ -67,8 +64,7 @@ target_position = Vector2(0, 17)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
 position = Vector2(-1, 5)
-polygon = PackedVector2Array(-21, -1, -14, -4, -7, -12, 1, -12, 7, -1, 7, 6, -21, 6, -22, 5, -22, 1)
+polygon = PackedVector2Array(-21, -2, -16, -4, -9, -12, 3, -12, 8, -2, 8, 7, -21, 7, -23, 5, -23, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 4.5)
-shape = SubResource("RectangleShape2D_m17lm")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, 3, -16, 2, -9, -6, 1, -6, 6, 4, 6, 11, -22, 11, -23, 10, -23, 6)

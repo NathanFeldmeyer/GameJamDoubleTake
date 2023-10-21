@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var countdown_label = $"../UI/Countdown"  # Replace "TimerLabel" with your label's name
 
 @export var SPEED: int = 150
 @export var JUMP_FORCE: int = 250
@@ -8,6 +9,11 @@ extends CharacterBody2D
 var is_moving: bool = false
 var was_in_air : bool = false
 var animation_lock: bool = false
+
+# Time power
+var saved_position = Vector2(0,0)
+var timer = 0.0
+var is_resetting = false
 
 func _ready():
 	anim.play("Idle")  # Start with the "Idle" animation	
@@ -29,11 +35,26 @@ func get_input(delta):
 			is_moving = false
 			anim.play("Idle")
 			
-
 	if Input.is_action_just_pressed("jump"):
 		if (is_on_floor()):
 			jump()
-			
+	
+	if Input.is_action_just_pressed("reset_time") and not is_resetting:
+		saved_position = position
+		timer = 5.0
+		is_resetting = true
+		Events.use_timer.emit()
+		print("Timer set off")
+	
+	if is_resetting:
+		countdown_label.text = str(int(timer + 1))  # Update the Label text
+		timer -= delta
+		if timer <= 0:
+			position = saved_position
+			is_resetting = false
+			Events.timer_stop.emit()
+			countdown_label.text = ""
+			print("Timer end")
 	
 	# gravity
 	velocity.y += GRAVITY * delta
