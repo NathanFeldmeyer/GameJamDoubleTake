@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=14 format=3 uid="uid://dhvjs30pt72rq"]
 
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_ib7q8"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_7d8kx"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://cterpfhoojeud" path="res://assets/lessthan3.png" id="3_g7b76"]
 [ext_resource type="Texture2D" uid="uid://du2yihjknen67" path="res://assets/background/bg-160px-sky.png" id="4_22uhj"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c6qsxakvf6kwv" path="res://assets/music/music4game.mp3" id="7_0gdfl"]
 [ext_resource type="PackedScene" uid="uid://ce82qor6grhwv" path="res://scenes/acorn.tscn" id="8_3nx16"]
 [ext_resource type="PackedScene" uid="uid://dj1wqu16v3ny6" path="res://scenes/level_completed.tscn" id="9_i5cwu"]
+[ext_resource type="PackedScene" uid="uid://dulw5lh7a3jga" path="res://scenes/car_enemy.tscn" id="11_uirxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4id2"]
 texture = ExtResource("4_ladsa")
@@ -104,10 +105,11 @@ texture = ExtResource("4_ladsa")
 
 [sub_resource type="TileSet" id="TileSet_u53lx"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_c4id2")
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_ib7q8")
+script = ExtResource("1_7d8kx")
 metadata/_edit_vertical_guides_ = [292.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -155,16 +157,19 @@ position = Vector2(910, 485)
 tile_set = SubResource("TileSet_u53lx")
 cell_quadrant_size = 32
 format = 2
-layer_0/tile_data = PackedInt32Array(-1245243, 393216, 0, -1245242, 458752, 0, -1179706, 393216, 1, -1245241, 393216, 0, -1179705, 458752, 1, -1245240, 458752, 0, -1179704, 393216, 1, -1245239, 393216, 0, -1179703, 458752, 1, -1245238, 458752, 0, -1179702, 393216, 1, -1245237, 393216, 0, -1179701, 458752, 1, -1245236, 458752, 0, -1179700, 393216, 1, -1245235, 393216, 0, -1179699, 458752, 1, -1245234, 458752, 0, -1179698, 393216, 1, -1245233, 393216, 0, -1179697, 458752, 1, -1245232, 458752, 0, -1179696, 393216, 1, -1245231, 393216, 0, -1179695, 458752, 1, -1245230, 458752, 0, -1179694, 393216, 1, -1245229, 393216, 0, -1179693, 458752, 1, -1245228, 458752, 0, -1179692, 393216, 1, -1245227, 393216, 0, -1179691, 458752, 1, -1245226, 458752, 0, -1179690, 393216, 1, -1245225, 393216, 0, -1179689, 458752, 1, -1245224, 458752, 0, -1179688, 393216, 1, -1245223, 393216, 0, -1179687, 458752, 1, -1245222, 458752, 0, -1179686, 393216, 1, -1245221, 393216, 0, -1179685, 458752, 1, -1245220, 0, 0, -1179684, 0, 1, -1245219, 65536, 0, -1179683, 65536, 1, -1245218, 0, 0, -1179682, 0, 1, -1245217, 65536, 0, -1179681, 65536, 1, -1245216, 393216, 0, -1179680, 393216, 1, -1245215, 458752, 0, -1179679, 458752, 1, -1245214, 393216, 0, -1179678, 393216, 1, -1245213, 458752, 0, -1179677, 458752, 1, -1245212, 393216, 0, -1179676, 393216, 1, -1245211, 458752, 0, -1179675, 458752, 1, -1245210, 393216, 0, -1179674, 393216, 1, -1245209, 458752, 0, -1179673, 458752, 1, -1376291, 0, 2, -1310755, 0, 3, -1376290, 65536, 2, -1310754, 65536, 3)
+layer_0/tile_data = PackedInt32Array(-1245243, 393216, 0, -1245242, 458752, 0, -1179706, 393216, 1, -1245241, 393216, 0, -1179705, 458752, 1, -1245240, 458752, 0, -1179704, 393216, 1, -1245239, 393216, 0, -1179703, 458752, 1, -1245238, 458752, 0, -1179702, 393216, 1, -1245237, 393216, 0, -1179701, 458752, 1, -1245236, 458752, 0, -1179700, 393216, 1, -1245235, 393216, 0, -1179699, 458752, 1, -1245234, 458752, 0, -1179698, 393216, 1, -1245233, 393216, 0, -1179697, 458752, 1, -1245232, 458752, 0, -1179696, 393216, 1, -1245231, 393216, 0, -1179695, 458752, 1, -1245230, 458752, 0, -1179694, 393216, 1, -1245229, 393216, 0, -1179693, 458752, 1, -1245228, 458752, 0, -1179692, 393216, 1, -1245227, 393216, 0, -1179691, 458752, 1, -1245226, 458752, 0, -1179690, 393216, 1, -1245225, 393216, 0, -1179689, 458752, 1, -1245224, 458752, 0, -1179688, 393216, 1, -1245223, 393216, 0, -1179687, 458752, 1, -1245222, 458752, 0, -1179686, 393216, 1, -1245221, 393216, 0, -1179685, 458752, 1, -1245220, 0, 0, -1179684, 0, 1, -1245219, 65536, 0, -1179683, 65536, 1, -1245218, 0, 0, -1179682, 0, 1, -1245217, 65536, 0, -1179681, 65536, 1, -1245216, 393216, 0, -1179680, 393216, 1, -1245215, 458752, 0, -1179679, 458752, 1, -1245214, 393216, 0, -1179678, 393216, 1, -1245213, 458752, 0, -1179677, 458752, 1, -1245212, 393216, 0, -1179676, 393216, 1, -1245211, 458752, 0, -1179675, 458752, 1, -1245210, 393216, 0, -1179674, 393216, 1, -1245209, 458752, 0, -1179673, 458752, 1, -1376291, 0, 2, -1310755, 0, 3, -1376290, 65536, 2, -1310754, 65536, 3, -1441823, 0, 0, -1441822, 65536, 0, -1441821, 0, 0, -1441820, 65536, 0, -1441819, 0, 0, -1441818, 65536, 0)
 
 [node name="Acorn" parent="." instance=ExtResource("8_3nx16")]
-position = Vector2(300, 141)
+position = Vector2(514, 152)
+collision_mask = 2
 
 [node name="Acorn2" parent="." instance=ExtResource("8_3nx16")]
 position = Vector2(212, 147)
+collision_mask = 2
 
 [node name="Acorn3" parent="." instance=ExtResource("8_3nx16")]
 position = Vector2(237, 138)
+collision_mask = 2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_ignore_camera_zoom = true
@@ -194,3 +199,6 @@ centered = false
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_0gdfl")
 autoplay = true
+
+[node name="Car Enemy" parent="." instance=ExtResource("11_uirxe")]
+position = Vector2(501, 99)

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://dulw5lh7a3jga"]
+
+[ext_resource type="Texture2D" uid="uid://dkfa0hmjotrax" path="res://assets/red-car-Sheet.png" id="1_d4tdy"]
+[ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_nfta2"]
+[ext_resource type="PackedScene" uid="uid://b7tjta7gbbpx1" path="res://scenes/hitbox.tscn" id="3_rg44y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sauo"]
+atlas = ExtResource("1_d4tdy")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk42w"]
+atlas = ExtResource("1_d4tdy")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1yct"]
+atlas = ExtResource("1_d4tdy")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eic4l"]
+atlas = ExtResource("1_d4tdy")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2lp7"]
+atlas = ExtResource("1_d4tdy")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nym7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sauo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk42w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1yct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eic4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2lp7")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m17lm"]
+size = Vector2(32, 23)
+
+[node name="Car Enemy" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_nfta2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nym7j")
+animation = &"Moving"
+autoplay = "Moving"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-27, 0)
+target_position = Vector2(0, 17)
+
+[node name="Hitbox" parent="." instance=ExtResource("3_rg44y")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2(-1, 5)
+polygon = PackedVector2Array(-21, -1, -14, -4, -7, -12, 1, -12, 7, -1, 7, 6, -21, 6, -22, 5, -22, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 4.5)
+shape = SubResource("RectangleShape2D_m17lm")
