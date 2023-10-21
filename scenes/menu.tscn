@@ -336,12 +336,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l4jab")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 320.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.27451, 0.0666667, 0.0666667, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.439216)
+theme_override_fonts/font = ExtResource("3_nwqlj")
+text = "In Your Darkest Hour"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 53.0
+offset_top = 62.0
 offset_right = 1935.0
-offset_bottom = 548.0
+offset_bottom = 612.0
 scale = Vector2(0.150351, 0.150351)
 theme_override_constants/separation = 320
 alignment = 1

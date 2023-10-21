@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dj1wqu16v3ny6"]
+[gd_scene load_steps=2 format=3 uid="uid://dj1wqu16v3ny6"]
+
+[ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="1_aloio"]
 
 [node name="LevelCompleted" type="ColorRect"]
 anchors_preset = 15
@@ -18,4 +20,5 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="CenterContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_aloio")
 text = "Level Completed!"

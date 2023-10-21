@@ -126,6 +126,7 @@ drag_vertical_enabled = true
 
 [node name="LevelCompleted" parent="UI" instance=ExtResource("9_i5cwu")]
 visible = false
+color = Color(0.054902, 0.152941, 0.329412, 0.235294)
 
 [node name="hearts_container" parent="UI" instance=ExtResource("3_ajxsp")]
 offset_left = 5.0
