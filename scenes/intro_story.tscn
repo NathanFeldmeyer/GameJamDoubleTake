@@ -470,7 +470,7 @@ offset_right = 283.0
 offset_bottom = 83.0
 theme_override_fonts/font = ExtResource("5_4gkhr")
 theme_override_font_sizes/font_size = 7
-text = "As you’re walking, you see a squirrel run into the street to reach an acorn. At the same time, a car speeds past you towards the squirrel. You watch the squirrel meet its terrible fate, and everything fades to black…"
+text = "As you’re walking, you see a squirrel run into the street to reach an acorn. At the same time, a car speeds past you towards the squirrel. You watch the squirrel meet its terrible fate, and everything fades to black. . ."
 autowrap_mode = 2
 script = ExtResource("4_xny7d")
 
@@ -484,7 +484,7 @@ offset_right = 283.0
 offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("5_4gkhr")
 theme_override_font_sizes/font_size = 7
-text = "You slowly begin to wake. It’s a new day? Through your window, you see a goldfinch perched on the tree. Seconds later, it flies away. The same as before… You realize you have a chance to save the squirrel."
+text = "You slowly begin to wake. It’s a new day? Through your window, you see a goldfinch perched on the tree. Seconds later, it flies away. The same as before. . . You realize you have a chance to save the squirrel."
 autowrap_mode = 2
 script = ExtResource("5_dnskf")
 
@@ -498,7 +498,7 @@ offset_right = 283.0
 offset_bottom = 92.0
 theme_override_fonts/font = ExtResource("5_4gkhr")
 theme_override_font_sizes/font_size = 7
-text = "You jump out of bed and hear a ticking noise. 5 seconds later, you are in bed, just as you were moments ago. Almost as if you went back in time… With your newfound time travel abilities, you must collect acorns, avoid obstacles, and save the squirrel."
+text = "You jump out of bed and hear a ticking noise. 5 seconds later, you are in bed, just as you were moments ago. Almost as if you went back in time. . . With your newfound time travel abilities, you must collect acorns, avoid obstacles, and save the squirrel."
 autowrap_mode = 2
 script = ExtResource("6_wtb0x")
 
