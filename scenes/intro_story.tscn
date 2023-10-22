@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdm7sn6rjgl42"]
+[gd_scene load_steps=31 format=3 uid="uid://bdm7sn6rjgl42"]
 
 [ext_resource type="Script" path="res://scripts/intro_story.gd" id="1_eg1rm"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="1_wxd6l"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bxtsru6l7p8xu" path="res://assets/music/jamtunes1.mp3" id="7_ahhqs"]
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="12_4laur"]
 [ext_resource type="Texture2D" uid="uid://vnkdblt5d7l1" path="res://assets/goldfinch-Sheet.png" id="13_rxnc1"]
+[ext_resource type="Texture2D" uid="uid://bn3i3y8l4qy5o" path="res://assets/player-Sheet.png" id="14_rcr4n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dx3l"]
 texture = ExtResource("1_wxd6l")
@@ -369,6 +370,70 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpbio"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(0, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj6eg"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(24, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v038a"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(48, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k75wh"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(72, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1jh4"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(96, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brhwv"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(120, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kqhv"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(144, 0, 24, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr7jh"]
+atlas = ExtResource("14_rcr4n")
+region = Rect2(168, 0, 24, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wt4kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpbio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wj6eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v038a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k75wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1jh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brhwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kqhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr7jh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="intro_story" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -587,7 +652,13 @@ position = Vector2(260.5, 150.5)
 scale = Vector2(1.4375, 1.4375)
 sprite_frames = SubResource("SpriteFrames_6058l")
 autoplay = "default"
-frame_progress = 0.852801
+frame_progress = 0.341907
+
+[node name="Player" type="AnimatedSprite2D" parent="."]
+position = Vector2(51.5, 136.917)
+scale = Vector2(1.79167, 1.79167)
+sprite_frames = SubResource("SpriteFrames_wt4kj")
+autoplay = "default"
 
 [connection signal="pressed" from="continuecontainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="continuecontainer/Continue2" to="." method="_on_continue_2_pressed"]
