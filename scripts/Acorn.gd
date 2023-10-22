@@ -7,12 +7,12 @@ func _on_body_entered(body):
 	if body.name == "player":
 		anim.play("Collected")
 		got.play()
-		Collectable.add_acorn()
 		
 
 func _on_animated_sprite_2d_animation_finished():
 	if anim.animation == "Collected":
 		queue_free()
+		Collectable.add_acorn()
 		var acorns = get_tree().get_nodes_in_group("Acorns")
 		if acorns.size() == 1:
 			Events.level_completed.emit()
