@@ -17,6 +17,7 @@ func _ready():
 	Events.level_completed.connect(show_level_completed)
 	Events.use_timer.connect(set_timer)
 	Events.timer_stop.connect(timer_idle)
+	Events.player_hit.connect(player_is_hit)
 	
 func show_level_completed():
 	level_completed.show()
@@ -26,3 +27,6 @@ func set_timer():
 
 func timer_idle():
 	timer.idle()
+
+func player_is_hit():
+	player.hit()

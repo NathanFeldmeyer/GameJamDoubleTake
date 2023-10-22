@@ -10,6 +10,13 @@ var is_moving: bool = false
 var was_in_air : bool = false
 var animation_lock: bool = false
 
+var direction
+
+# Knockback
+var knockback: Vector2 = Vector2(0,0)
+var knockbackTween
+var knockback_value = 0
+
 # Time power
 var saved_position = Vector2(0,0)
 var timer = 0.0
@@ -60,19 +67,26 @@ func get_input(delta):
 	velocity.y += GRAVITY * delta
 	set_velocity(velocity)
 	set_up_direction(Vector2.UP)
+	
+	velocity = velocity + knockback
+	
 	move_and_slide()
+	
+	
 
 func _physics_process(delta):
 	
 	get_input(delta)
 	
-	var direction = Input.get_axis("move_left", "move_right")
+	direction = Input.get_axis("move_left", "move_right")
 	
 	# Rotate
 	if direction == 1:
 		anim.flip_h = false
 	elif direction == -1:
 		anim.flip_h = true
+		
+	
 
 func jump():
 	velocity.y -= JUMP_FORCE
@@ -80,3 +94,24 @@ func jump():
 
 #func land():
 		#anim.play("jump end")
+
+func _hit(knockback_strength: Vector2 = Vector2(0,0), stop_time: float = 0.25):
+	print("Knocked back")
+	if (knockback_strength != Vector2(0,0)):
+		knockback = knockback_strength
+	
+	knockbackTween = get_tree().create_tween()
+	knockbackTween.parallel().tween_property(self, "knockback", Vector2(0,0), stop_time)
+	
+	$AnimatedSprite2D.modulate = Color(1,0,0,1)
+	knockbackTween.parallel().tween_property($AnimatedSprite2D, "modulate", Color(1,1,1,1), stop_time)
+
+func hit():
+	print("Hit!")
+	
+	if anim.flip_h == false:
+		knockback_value = -500
+	elif anim.flip_h == true:
+		knockback_value = 500
+	
+	_hit(Vector2(knockback_value,-30))

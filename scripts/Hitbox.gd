@@ -13,3 +13,4 @@ func _on_body_entered(body):
 			Collectable.no_acorns()
 		oof.play()
 		CurrentHealth.damage()
+		Events.player_hit.emit()

@@ -140,7 +140,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(14, 26)
+size = Vector2(10, 25)
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
@@ -154,7 +154,7 @@ animation = &"jump"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(-2, 1.5)
 shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
