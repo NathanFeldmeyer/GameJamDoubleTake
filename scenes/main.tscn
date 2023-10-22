@@ -352,6 +352,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="tip 1" type="Label" parent="tipscontainer"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 100.0
 offset_right = 214.0
@@ -362,6 +363,7 @@ theme_override_font_sizes/font_size = 6
 text = "Collect all the acorns!"
 
 [node name="tip 2" type="Label" parent="tipscontainer"]
+layout_mode = 0
 offset_left = 284.0
 offset_top = 50.0
 offset_right = 374.0
@@ -373,6 +375,7 @@ text = "Jump on objects to reach high places"
 autowrap_mode = 2
 
 [node name="tip 3" type="Label" parent="tipscontainer"]
+layout_mode = 0
 offset_left = 385.0
 offset_top = 72.0
 offset_right = 461.0
@@ -384,6 +387,7 @@ text = "Careful! Avoid moving cars"
 autowrap_mode = 2
 
 [node name="tip 4" type="Label" parent="tipscontainer"]
+layout_mode = 0
 offset_left = 567.0
 offset_top = 31.0
 offset_right = 689.0
@@ -395,6 +399,7 @@ text = "Press E to use your time travel power for this acorn, or else you'll get
 autowrap_mode = 2
 
 [node name="tip 5" type="Label" parent="tipscontainer"]
+layout_mode = 0
 offset_left = 543.0
 offset_top = 154.0
 offset_right = 756.0
