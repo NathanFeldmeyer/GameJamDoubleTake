@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dsqcmqp5gisgg"]
+[gd_scene load_steps=17 format=3 uid="uid://dsqcmqp5gisgg"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_0k8nk"]
 [ext_resource type="PackedScene" uid="uid://dj1wqu16v3ny6" path="res://scenes/level_completed.tscn" id="2_jp0qv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://scenes/acorn_container.tscn" id="4_a8bik"]
 [ext_resource type="PackedScene" uid="uid://pfjs62hg367i" path="res://scenes/timer.tscn" id="5_0h1u5"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="6_cyy57"]
+[ext_resource type="PackedScene" uid="uid://del3pm6tfjkpf" path="res://scenes/game_over.tscn" id="6_p4t72"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="7_6u7ka"]
 [ext_resource type="PackedScene" uid="uid://ce82qor6grhwv" path="res://scenes/acorn.tscn" id="8_ryauy"]
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="9_ek1g4"]
@@ -223,6 +224,9 @@ offset_left = 22.0
 offset_top = 14.0
 offset_right = 62.0
 offset_bottom = 40.0
+
+[node name="GameOver" parent="UI" instance=ExtResource("6_p4t72")]
+visible = false
 
 [node name="player" parent="." instance=ExtResource("6_cyy57")]
 position = Vector2(26, 140)

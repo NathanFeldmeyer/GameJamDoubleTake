@@ -9,3 +9,5 @@ signal timer_stop
 signal player_hit
 
 signal game_over
+
+signal next_level

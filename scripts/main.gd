@@ -7,6 +7,11 @@ extends Node2D
 @onready var timer = $UI/timer
 @onready var player = $player
 
+@export var level_2: PackedScene
+
+func next_level() -> void:
+	get_tree().change_scene_to_packed(level_2)
+
 func _ready():
 	heartscontainer.set_max_hearts(CurrentHealth.max_hearts)
 	heartscontainer.update_hearts(CurrentHealth.hearts)
@@ -18,6 +23,7 @@ func _ready():
 	RenderingServer.set_default_clear_color(Color.DARK_SLATE_BLUE)
 	
 	Events.level_completed.connect(show_level_completed)
+	Events.next_level.connect(next_level)
 	Events.use_timer.connect(set_timer)
 	Events.timer_stop.connect(timer_idle)
 	Events.player_hit.connect(player_is_hit)
@@ -25,6 +31,7 @@ func _ready():
 	# player.player_died.connect(_on_player_died)
 	
 func show_level_completed():
+	player.active = false
 	level_completed.show()
 
 func show_game_over():

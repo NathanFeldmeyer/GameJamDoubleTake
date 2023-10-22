@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=23 format=3 uid="uid://dhvjs30pt72rq"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7d8kx"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dsqcmqp5gisgg" path="res://scenes/level-lili.tscn" id="2_o51pu"]
 [ext_resource type="PackedScene" uid="uid://dc7gsy2ol3m5g" path="res://scenes/hearts_container.tscn" id="3_ajxsp"]
 [ext_resource type="Texture2D" uid="uid://du2yihjknen67" path="res://assets/background/bg-160px-sky.png" id="4_22uhj"]
 [ext_resource type="PackedScene" uid="uid://pfjs62hg367i" path="res://scenes/timer.tscn" id="4_hslch"]
@@ -237,6 +238,7 @@ sources/2 = SubResource("TileSetAtlasSource_7neni")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_7d8kx")
+level_2 = ExtResource("2_o51pu")
 metadata/_edit_vertical_guides_ = [292.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
