@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="4_j1s2n"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="4_ladsa"]
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="5_ah076"]
-[ext_resource type="PackedScene" uid="uid://gfu7e01yv4gn" path="res://scenes/acorn_container.tscn" id="5_l1d32"]
+[ext_resource type="PackedScene" path="res://scenes/acorn_container.tscn" id="5_l1d32"]
 [ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="6_o0uhr"]
 [ext_resource type="PackedScene" uid="uid://del3pm6tfjkpf" path="res://scenes/game_over.tscn" id="6_pcg0d"]
 [ext_resource type="AudioStream" uid="uid://c6qsxakvf6kwv" path="res://assets/music/music4game.mp3" id="7_0gdfl"]
@@ -482,6 +482,7 @@ position = Vector2(755, 99)
 
 [node name="tipscontainer" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
+z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0
 
