@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ctqsv4wi3nn1u" path="res://scenes/nathan_lvl.tscn" id="2_cmhlh"]
 [ext_resource type="PackedScene" uid="uid://dj1wqu16v3ny6" path="res://scenes/level_completed.tscn" id="2_jp0qv"]
 [ext_resource type="PackedScene" uid="uid://dc7gsy2ol3m5g" path="res://scenes/hearts_container.tscn" id="3_yeuoo"]
-[ext_resource type="PackedScene" path="res://scenes/acorn_container.tscn" id="4_a8bik"]
+[ext_resource type="PackedScene" uid="uid://gfu7e01yv4gn" path="res://scenes/acorn_container.tscn" id="4_a8bik"]
 [ext_resource type="PackedScene" uid="uid://pfjs62hg367i" path="res://scenes/timer.tscn" id="5_0h1u5"]
 [ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="6_51kr4"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="6_cyy57"]
