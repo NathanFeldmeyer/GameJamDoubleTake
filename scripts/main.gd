@@ -7,10 +7,10 @@ extends Node2D
 @onready var timer = $UI/timer
 @onready var player = $player
 
-@export var level_2: PackedScene
+@export var next_level_scene: PackedScene
 
 func next_level() -> void:
-	get_tree().change_scene_to_packed(level_2)
+	get_tree().change_scene_to_packed(next_level_scene)
 
 func _ready():
 	heartscontainer.set_max_hearts(CurrentHealth.max_hearts)

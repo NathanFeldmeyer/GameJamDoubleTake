@@ -24,6 +24,7 @@ theme_override_fonts/font = ExtResource("1_aloio")
 text = "Level Completed!"
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 104.0
 offset_right = 316.0
