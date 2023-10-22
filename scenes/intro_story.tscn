@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/narration.gd" id="3_h6oaw"]
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="3_r2iu3"]
 [ext_resource type="Texture2D" uid="uid://ch0txslpfpuk4" path="res://assets/acorcui.png" id="4_7w8jq"]
-[ext_resource type="Script" path="res://narration2.gd" id="4_84onv"]
+[ext_resource type="Script" path="res://scripts/narration2.gd" id="4_xny7d"]
 [ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="5_4gkhr"]
 [ext_resource type="Script" path="res://scripts/narration3.gd" id="5_dnskf"]
 [ext_resource type="Script" path="res://scripts/narration4.gd" id="6_wtb0x"]
@@ -383,7 +383,7 @@ theme_override_fonts/font = ExtResource("5_4gkhr")
 theme_override_font_sizes/font_size = 7
 text = "As you’re walking, you see a squirrel run into the street to reach an acorn. At the same time, a car speeds past you towards the squirrel. You watch the squirrel meet its terrible fate, and everything fades to black…"
 autowrap_mode = 2
-script = ExtResource("4_84onv")
+script = ExtResource("4_xny7d")
 
 [node name="narration3" type="Label" parent="storycontainer"]
 visible = false
