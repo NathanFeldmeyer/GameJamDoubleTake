@@ -10,5 +10,5 @@ func _showStory():
 		drawTextSpeed += 1
 		self.visible_characters = drawTextSpeed
 
-func _process(delta):
+func _process(_delta):
 	_showStory()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://crpem6jmtm72h"]
+[gd_scene load_steps=26 format=3 uid="uid://crpem6jmtm72h"]
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bn3i3y8l4qy5o" path="res://assets/player-Sheet.png" id="3_qwbad"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://0yar1xdnofvm" path="res://assets/jumpfull/jump_full9.png" id="13_04tb5"]
 [ext_resource type="Texture2D" uid="uid://d0mjouqekv4np" path="res://assets/jumpfull/jump_full6.png" id="13_30cns"]
 [ext_resource type="Texture2D" uid="uid://ugsrsk5vbr1" path="res://assets/jumpfull/jump_full10.png" id="14_nwnl5"]
+[ext_resource type="AudioStream" uid="uid://d4j8dbn6ujb6m" path="res://assets/sound effects/rip.mp3" id="15_x52p2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yd0tt"]
 atlas = ExtResource("3_qwbad")
@@ -158,3 +159,6 @@ position = Vector2(-2, 1.5)
 shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_x52p2")

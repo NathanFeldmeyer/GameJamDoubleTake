@@ -12,6 +12,5 @@ func damage():
 	
 	if hearts == 0: 
 		hearts = max_hearts
-		get_tree().reload_current_scene()
 		
 	healthChanged.emit(hearts)

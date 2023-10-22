@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://del3pm6tfjkpf"]
+
+[ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="1_3sbxk"]
+
+[node name="game_over" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_right = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3sbxk")
+text = "Game over"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 54.0
+offset_top = 107.0
+offset_right = 264.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_3sbxk")
+theme_override_font_sizes/font_size = 10
+text = "Press 'W' to try again!"
