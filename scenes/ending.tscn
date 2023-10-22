@@ -128,7 +128,7 @@ offset_right = 287.0
 offset_bottom = 79.0
 theme_override_fonts/font = ExtResource("4_vllma")
 theme_override_font_sizes/font_size = 7
-text = "In your darkest hour, the squirrel arrives…"
+text = "In your darkest hour, the squirrel arrives. . ."
 autowrap_mode = 2
 script = ExtResource("7_gwj8m")
 
