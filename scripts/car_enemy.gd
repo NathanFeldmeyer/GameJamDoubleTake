@@ -18,6 +18,9 @@ func _physics_process(delta):
 	if !$RayCast2D.is_colliding() && is_on_floor():
 		flip()
 	
+	if velocity.x == 0:
+		flip()
+		
 	velocity.x = speed
 	move_and_slide()
 
