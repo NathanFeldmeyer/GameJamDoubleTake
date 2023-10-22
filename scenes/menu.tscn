@@ -336,17 +336,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l4jab")
 
-[node name="Label" type="Label" parent="."]
+[node name="In Your Darkest Hour" type="Label" parent="."]
 layout_mode = 0
 offset_top = 30.0
 offset_right = 320.0
 offset_bottom = 53.0
 theme_override_colors/font_color = Color(0.27451, 0.0666667, 0.0666667, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.439216)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.721569)
 theme_override_fonts/font = ExtResource("3_nwqlj")
 text = "In Your Darkest Hour"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -357,6 +358,7 @@ offset_bottom = 612.0
 scale = Vector2(0.150351, 0.150351)
 theme_override_constants/separation = 320
 alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="Play" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 300)
@@ -472,6 +474,85 @@ format = 2
 layer_0/name = "Sky"
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 196608, 1, 3, 262144, 1, 4, 327680, 1, 5, 393216, 1, 6, 458752, 1, 7, 1, 65537, 0, 65537, 65537, 1, 131073, 65537, 2, 196609, 65537, 3, 262145, 65537, 4, 327681, 65537, 5, 393217, 65537, 6, 458753, 65537, 7, 2, 131073, 0, 65538, 131073, 1, 131074, 131073, 2, 196610, 131073, 3, 262146, 131073, 4, 327682, 131073, 5, 393218, 131073, 6, 458754, 131073, 7, 3, 196609, 0, 65539, 196609, 1, 131075, 196609, 2, 196611, 196609, 3, 262147, 196609, 4, 327683, 196609, 5, 393219, 196609, 6, 458755, 196609, 7, 4, 262145, 0, 65540, 262145, 1, 131076, 262145, 2, 196612, 262145, 3, 262148, 262145, 4, 327684, 262145, 5, 393220, 262145, 6, 458756, 262145, 7, 5, 327681, 0, 65541, 327681, 1, 131077, 327681, 2, 196613, 327681, 3, 262149, 327681, 4, 327685, 327681, 5, 393221, 327681, 6, 458757, 327681, 7, 6, 393217, 0, 65542, 393217, 1, 131078, 393217, 2, 196614, 393217, 3, 262150, 393217, 4, 327686, 393217, 5, 393222, 393217, 6, 458758, 393217, 7, 7, 458753, 0, 65543, 458753, 1, 131079, 458753, 2, 196615, 458753, 3, 262151, 458753, 4, 327687, 458753, 5, 393223, 458753, 6, 458759, 458753, 7, 8, 524289, 0, 65544, 524289, 1, 131080, 524289, 2, 196616, 524289, 3, 262152, 524289, 4, 327688, 524289, 5, 393224, 524289, 6, 458760, 524289, 7, 9, 589825, 0, 65545, 589825, 1, 131081, 589825, 2, 196617, 589825, 3, 262153, 589825, 4, 327689, 589825, 5, 393225, 589825, 6, 458761, 589825, 7, 10, 655361, 0, 65546, 655361, 1, 131082, 655361, 2, 196618, 655361, 3, 262154, 655361, 4, 327690, 655361, 5, 393226, 655361, 6, 458762, 655361, 7, 11, 720897, 0, 65547, 720897, 1, 131083, 720897, 2, 196619, 720897, 3, 262155, 720897, 4, 327691, 720897, 5, 393227, 720897, 6, 458763, 720897, 7, 12, 786433, 0, 65548, 786433, 1, 131084, 786433, 2, 196620, 786433, 3, 262156, 786433, 4, 327692, 786433, 5, 393228, 786433, 6, 458764, 786433, 7, 13, 851969, 0, 65549, 851969, 1, 131085, 851969, 2, 196621, 851969, 3, 262157, 851969, 4, 327693, 851969, 5, 393229, 851969, 6, 458765, 851969, 7, 14, 917505, 0, 65550, 917505, 1, 131086, 917505, 2, 196622, 917505, 3, 262158, 917505, 4, 327694, 917505, 5, 393230, 917505, 6, 458766, 917505, 7, 15, 983041, 0, 65551, 983041, 1, 131087, 983041, 2, 196623, 983041, 3, 262159, 983041, 4, 327695, 983041, 5, 393231, 983041, 6, 458767, 983041, 7, 16, 1048577, 0, 65552, 1048577, 1, 131088, 1048577, 2, 196624, 1048577, 3, 262160, 1048577, 4, 327696, 1048577, 5, 393232, 1048577, 6, 458768, 1048577, 7, 17, 1114113, 0, 65553, 1114113, 1, 131089, 1114113, 2, 196625, 1114113, 3, 262161, 1114113, 4, 327697, 1114113, 5, 393233, 1114113, 6, 458769, 1114113, 7, 18, 1179649, 0, 65554, 1179649, 1, 131090, 1179649, 2, 196626, 1179649, 3, 262162, 1179649, 4, 327698, 1179649, 5, 393234, 1179649, 6, 458770, 1179649, 7, 19, 1245185, 0, 65555, 1245185, 1, 131091, 1245185, 2, 196627, 1245185, 3, 262163, 1245185, 4, 327699, 1245185, 5, 393235, 1245185, 6, 458771, 1245185, 7, 20, 1310721, 0, 65556, 1310721, 1, 131092, 1310721, 2, 196628, 1310721, 3, 262164, 1310721, 4, 327700, 1310721, 5, 393236, 1310721, 6, 458772, 1310721, 7, 21, 1376257, 0, 65557, 1376257, 1, 131093, 1376257, 2, 196629, 1376257, 3, 262165, 1376257, 4, 327701, 1376257, 5, 393237, 1376257, 6, 458773, 1376257, 7, 524288, 1, 8, 589824, 1, 9, 524289, 65537, 8, 589825, 65537, 9, 524290, 131073, 8, 589826, 131073, 9, 524291, 196609, 8, 589827, 196609, 9, 524292, 262145, 8, 589828, 262145, 9, 524293, 327681, 8, 589829, 327681, 9, 524294, 393217, 8, 589830, 393217, 9, 524295, 458753, 8, 589831, 458753, 9, 524296, 524289, 8, 589832, 524289, 9, 524297, 589825, 8, 589833, 589825, 9, 524298, 655361, 8, 589834, 655361, 9, 524299, 720897, 8, 589835, 720897, 9, 524300, 786433, 8, 589836, 786433, 9, 524301, 851969, 8, 589837, 851969, 9, 524302, 917505, 8, 589838, 917505, 9, 524303, 983041, 8, 589839, 983041, 9, 524304, 1048577, 8, 589840, 1048577, 9, 524305, 1114113, 8, 589841, 1114113, 9, 524306, 1179649, 8, 589842, 1179649, 9, 524307, 1245185, 8, 589843, 1245185, 9, 524308, 1310721, 8, 589844, 1310721, 9, 524309, 1376257, 8, 589845, 1376257, 9, 655360, 0, 0, 720896, 0, 1, 655361, 65536, 0, 720897, 65536, 1, 655362, 0, 0, 720898, 0, 1, 655363, 65536, 0, 720899, 65536, 1, 655364, 0, 0, 720900, 0, 1, 655365, 65536, 0, 720901, 65536, 1, 655366, 0, 0, 720902, 0, 1, 655367, 65536, 0, 720903, 65536, 1, 655368, 0, 0, 720904, 0, 1, 655369, 65536, 0, 720905, 65536, 1, 655370, 0, 0, 720906, 0, 1, 655371, 65536, 0, 720907, 65536, 1, 655372, 0, 0, 720908, 0, 1, 655373, 65536, 0, 720909, 65536, 1, 655374, 0, 0, 720910, 0, 1, 655375, 65536, 0, 720911, 65536, 1, 655376, 0, 0, 720912, 0, 1, 655377, 65536, 0, 720913, 65536, 1, 655378, 0, 0, 720914, 0, 1, 655379, 65536, 0, 720915, 65536, 1, 655380, 0, 0, 720916, 0, 1, 655381, 65536, 0, 720917, 65536, 1)
 
+[node name="PopUp" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="guidepop" type="Control" parent="PopUp"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PopUp/guidepop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -37.0
+offset_right = 60.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopUp/guidepop/Panel"]
+layout_mode = 0
+offset_left = 106.0
+offset_right = 120.0
+offset_bottom = 43.0
+
+[node name="X" type="Button" parent="PopUp/guidepop/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nwqlj")
+theme_override_font_sizes/font_size = 6
+text = "X"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopUp/guidepop/Panel"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 122.0
+offset_bottom = 157.0
+mouse_filter = 2
+alignment = 1
+
+[node name="Controls" type="Label" parent="PopUp/guidepop/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nwqlj")
+theme_override_font_sizes/font_size = 6
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PopUp/guidepop/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_nwqlj")
+theme_override_font_sizes/normal_font_size = 6
+text = "Up: 	w,  up arrow
+Right: d, right arrow
+Left: a, left arrow
+Down: s, down arrow
+Time travel: e"
+
+[node name="Objective" type="Label" parent="PopUp/guidepop/Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nwqlj")
+theme_override_font_sizes/font_size = 6
+text = "Objective"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PopUp/guidepop/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_nwqlj")
+theme_override_font_sizes/normal_font_size = 6
+text = "Collect acorns, time travel, and save the squirrel!"
+
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Guide" to="." method="_on_guide_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PopUp/guidepop/Panel/VBoxContainer/X" to="." method="_on_x_pressed"]
