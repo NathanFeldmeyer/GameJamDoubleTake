@@ -10,6 +10,8 @@ extends Node2D
 @export var next_level_scene: PackedScene
 
 func next_level() -> void:
+	CurrentHealth.hearts = 3
+	Collectable.no_acorns()
 	get_tree().change_scene_to_packed(next_level_scene)
 
 func _ready():
