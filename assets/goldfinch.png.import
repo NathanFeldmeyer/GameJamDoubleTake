@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkfdqivfkms42"
-path="res://.godot/imported/Right Hit (42x42).png-df04bfc6d6a02ae217ed069c2a099ab6.ctex"
+uid="uid://cjvuvhnsoftl6"
+path="res://.godot/imported/goldfinch.png-e8f7827fd606ba80db0fa4c0a0f2018d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Traps/Rock Head/Right Hit (42x42).png"
-dest_files=["res://.godot/imported/Right Hit (42x42).png-df04bfc6d6a02ae217ed069c2a099ab6.ctex"]
+source_file="res://assets/goldfinch.png"
+dest_files=["res://.godot/imported/goldfinch.png-e8f7827fd606ba80db0fa4c0a0f2018d.ctex"]
 
 [params]
 
