@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctqsv4wi3nn1u"]
+
+[ext_resource type="PackedScene" uid="uid://dj1wqu16v3ny6" path="res://scenes/level_completed.tscn" id="1_tprse"]
+[ext_resource type="PackedScene" uid="uid://dc7gsy2ol3m5g" path="res://scenes/hearts_container.tscn" id="2_h3hux"]
+[ext_resource type="PackedScene" uid="uid://pfjs62hg367i" path="res://scenes/timer.tscn" id="3_hdmmm"]
+[ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="4_l2a3p"]
+
+[node name="nathan_lvl" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(162, 91)
+
+[node name="UI" type="CanvasLayer" parent="Camera2D"]
+
+[node name="LevelCompleted" parent="Camera2D/UI" instance=ExtResource("1_tprse")]
+visible = false
+
+[node name="hearts_container" parent="Camera2D/UI" instance=ExtResource("2_h3hux")]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 48.0
+offset_bottom = 16.0
+
+[node name="timer" parent="Camera2D/UI" instance=ExtResource("3_hdmmm")]
+position = Vector2(-27, 28)
+
+[node name="Countdown" type="Label" parent="Camera2D/UI"]
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 62.0
+offset_bottom = 40.0
+
+[node name="player" parent="." instance=ExtResource("4_l2a3p")]
+position = Vector2(160, 121)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="player"]
+position = Vector2(2, -30)
+remote_path = NodePath("../../Camera2D")
