@@ -1,7 +1,7 @@
 extends Control
 
-@onready var ending = $storycontainer/ending
-@onready var ending2 = $storycontainer/ending2
+@onready var ending = $storycontainer/endingstory
+@onready var ending2 = $storycontainer/endingstory2
 @onready var continueending = $continueending
 @onready var continueending2 = $continueending2
 @onready var squirrel = $Squirrel

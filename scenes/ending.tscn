@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct37gf87dalbt"]
+[gd_scene load_steps=14 format=3 uid="uid://ct37gf87dalbt"]
 
-[ext_resource type="Script" path="res://scenes/ending.gd" id="1_0m800"]
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="1_4jfgd"]
+[ext_resource type="Script" path="res://scripts/endingcontrol.gd" id="1_lvwey"]
 [ext_resource type="Texture2D" uid="uid://du2yihjknen67" path="res://assets/background/bg-160px-sky.png" id="2_s1cvc"]
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="3_7jyyv"]
 [ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="4_vllma"]
 [ext_resource type="Texture2D" uid="uid://ch0txslpfpuk4" path="res://assets/acorcui.png" id="5_5dy16"]
 [ext_resource type="Script" path="res://scripts/ending.gd" id="5_bfpkg"]
-[ext_resource type="Script" path="res://scenes/ending2.gd" id="7_gwj8m"]
+[ext_resource type="Script" path="res://scripts/ending2.gd" id="7_gwj8m"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="9_xenls"]
 [ext_resource type="Texture2D" uid="uid://bb1nbmd5fq3bx" path="res://assets/squirrel.png" id="10_ehr8t"]
+[ext_resource type="AudioStream" uid="uid://ben6b3sdhko53" path="res://assets/music/3music.mp3" id="11_y7jre"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2nklp"]
 texture = ExtResource("9_xenls")
@@ -72,7 +73,7 @@ sources/0 = SubResource("TileSetAtlasSource_2nklp")
 [node name="ending" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_0m800")
+script = ExtResource("1_lvwey")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_ignore_camera_zoom = true
@@ -106,7 +107,7 @@ offset_top = 16.0
 offset_right = 304.0
 offset_bottom = 101.0
 
-[node name="ending" type="Label" parent="storycontainer"]
+[node name="endingstory" type="Label" parent="storycontainer"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 5.0
@@ -118,7 +119,7 @@ text = "You have successfully saved the squirrel with your time-travel abilities
 autowrap_mode = 2
 script = ExtResource("5_bfpkg")
 
-[node name="ending2" type="Label" parent="storycontainer"]
+[node name="endingstory2" type="Label" parent="storycontainer"]
 visible = false
 layout_mode = 0
 offset_left = 9.0
@@ -147,7 +148,7 @@ offset_right = 56.0
 offset_bottom = 20.0
 texture = ExtResource("5_5dy16")
 
-[node name="Label" type="Label" parent="continueending"]
+[node name="continue" type="Label" parent="continueending"]
 layout_mode = 0
 offset_left = -20.0
 offset_top = 4.0
@@ -174,12 +175,12 @@ offset_right = 56.0
 offset_bottom = 20.0
 texture = ExtResource("5_5dy16")
 
-[node name="Label" type="Label" parent="continueending2"]
+[node name="back to menu" type="Label" parent="continueending2"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 3.0
-offset_right = 37.0
-offset_bottom = 26.0
+offset_left = -41.0
+offset_top = 5.0
+offset_right = 36.0
+offset_bottom = 28.0
 theme_override_fonts/font = ExtResource("4_vllma")
 theme_override_font_sizes/font_size = 7
 text = "Back to menu
@@ -194,6 +195,11 @@ layer_0/tile_data = PackedInt32Array(655360, 393216, 0, 720896, 393216, 1, 65536
 visible = false
 position = Vector2(299, 159)
 texture = ExtResource("10_ehr8t")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_y7jre")
+volume_db = -8.297
+autoplay = true
 
 [connection signal="pressed" from="continueending" to="." method="_on_continueending_pressed"]
 [connection signal="pressed" from="continueending2" to="." method="_on_continueending_2_pressed"]
