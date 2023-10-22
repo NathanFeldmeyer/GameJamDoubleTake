@@ -1,10 +1,12 @@
 extends Area2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var got = $got
 
 func _on_body_entered(body):
 	if body.name == "player":
 		anim.play("Collected")
+		got.play()
 		Collectable.add_acorn()
 		
 

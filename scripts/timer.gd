@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var time = $time
+
 var timer = 0.0
 var is_resetting = false
 
@@ -13,3 +15,4 @@ func idle():
 
 func tick():
 	anim.play("Tick")
+	time.play()

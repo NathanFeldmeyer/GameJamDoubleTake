@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://ce82qor6grhwv"]
+[gd_scene load_steps=14 format=3 uid="uid://ce82qor6grhwv"]
 
 [ext_resource type="Script" path="res://scripts/Acorn.gd" id="1_ymvrp"]
 [ext_resource type="Texture2D" uid="uid://bj7njyag267ry" path="res://assets/collected-anim-Sheet.png" id="2_x627v"]
 [ext_resource type="Texture2D" uid="uid://cfl65pvyeepae" path="res://assets/acorn-collectable-Sheet.png" id="3_begcv"]
+[ext_resource type="AudioStream" uid="uid://ywmmmg4t3siv" path="res://assets/sound effects/got.mp3" id="4_imjm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_loasn"]
 atlas = ExtResource("2_x627v")
@@ -80,6 +81,9 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_q3bi6")
+
+[node name="got" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_imjm5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

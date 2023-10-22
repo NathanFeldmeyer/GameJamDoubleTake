@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dulw5lh7a3jga"]
+[gd_scene load_steps=13 format=3 uid="uid://dulw5lh7a3jga"]
 
 [ext_resource type="Texture2D" uid="uid://dkfa0hmjotrax" path="res://assets/red-car-Sheet.png" id="1_d4tdy"]
 [ext_resource type="Script" path="res://scripts/car_enemy.gd" id="1_nfta2"]
 [ext_resource type="PackedScene" uid="uid://b7tjta7gbbpx1" path="res://scenes/hitbox.tscn" id="3_rg44y"]
+[ext_resource type="AudioStream" uid="uid://1trqdnas4iue" path="res://assets/sound effects/ouch.mp3" id="4_831yi"]
+[ext_resource type="AudioStream" uid="uid://d4j8dbn6ujb6m" path="res://assets/sound effects/rip.mp3" id="5_vv0a6"]
+[ext_resource type="AudioStream" uid="uid://02tgbnynhspj" path="res://assets/sound effects/carenemy.mp3" id="6_itg4r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6sauo"]
 atlas = ExtResource("1_d4tdy")
@@ -68,3 +71,14 @@ polygon = PackedVector2Array(-21, -2, -16, -4, -9, -12, 3, -12, 8, -2, 8, 7, -21
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-20, 3, -16, 2, -9, -6, 1, -6, 6, 4, 6, 11, -22, 11, -23, 10, -23, 6)
+
+[node name="oof" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_831yi")
+volume_db = -4.86
+
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vv0a6")
+
+[node name="honk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_itg4r")
+volume_db = -4.885

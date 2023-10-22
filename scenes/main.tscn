@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="4_j1s2n"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="4_ladsa"]
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="5_ah076"]
-[ext_resource type="PackedScene" path="res://scenes/acorn_container.tscn" id="5_l1d32"]
+[ext_resource type="PackedScene" uid="uid://gfu7e01yv4gn" path="res://scenes/acorn_container.tscn" id="5_l1d32"]
 [ext_resource type="AudioStream" uid="uid://c6qsxakvf6kwv" path="res://assets/music/music4game.mp3" id="7_0gdfl"]
 [ext_resource type="PackedScene" uid="uid://ce82qor6grhwv" path="res://scenes/acorn.tscn" id="8_3nx16"]
 [ext_resource type="PackedScene" uid="uid://dj1wqu16v3ny6" path="res://scenes/level_completed.tscn" id="9_i5cwu"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://pfjs62hg367i"]
+[gd_scene load_steps=14 format=3 uid="uid://pfjs62hg367i"]
 
 [ext_resource type="Texture2D" uid="uid://ok5o22xu7fk0" path="res://assets/timer-sheet.png" id="1_3vsh1"]
 [ext_resource type="Script" path="res://scripts/timer.gd" id="1_e6wiw"]
+[ext_resource type="AudioStream" uid="uid://dltvadwka6a6k" path="res://assets/sound effects/time.mp3" id="3_mi4o5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56ucw"]
 atlas = ExtResource("1_3vsh1")
@@ -88,5 +89,8 @@ animation = &"Tick"
 autoplay = "Idle"
 frame = 3
 frame_progress = 0.333769
+
+[node name="time" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mi4o5")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
