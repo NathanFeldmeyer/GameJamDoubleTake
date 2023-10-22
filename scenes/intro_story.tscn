@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdm7sn6rjgl42"]
+[gd_scene load_steps=18 format=3 uid="uid://bdm7sn6rjgl42"]
 
 [ext_resource type="Script" path="res://scripts/intro_story.gd" id="1_eg1rm"]
 [ext_resource type="Texture2D" uid="uid://bq6jx741k3yq8" path="res://assets/Double-take-tilemap.png" id="1_wxd6l"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/narration4.gd" id="6_wtb0x"]
 [ext_resource type="AudioStream" uid="uid://bxtsru6l7p8xu" path="res://assets/music/jamtunes1.mp3" id="7_ahhqs"]
 [ext_resource type="Script" path="res://scripts/ParallaxBackground.gd" id="12_4laur"]
+[ext_resource type="Texture2D" uid="uid://cjvuvhnsoftl6" path="res://assets/goldfinch.png" id="13_mj1hn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dx3l"]
 texture = ExtResource("1_wxd6l")
@@ -558,6 +559,11 @@ motion_mirroring = Vector2(360, 0)
 position = Vector2(-24, 16)
 texture = ExtResource("3_r2iu3")
 centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(246, 149)
+scale = Vector2(1.625, 1.625)
+texture = ExtResource("13_mj1hn")
 
 [connection signal="pressed" from="continuecontainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="continuecontainer/Continue2" to="." method="_on_continue_2_pressed"]
