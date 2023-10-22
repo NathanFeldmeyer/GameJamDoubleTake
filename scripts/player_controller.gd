@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
+signal player_died
+
 @onready var anim = $AnimatedSprite2D
 @onready var countdown_label = $"../UI/Countdown"  # Replace "TimerLabel" with your label's name
+@onready var death_sound = $DeathSound
+@onready var collision_shape = $CollisionShape2D
 
 @export var SPEED: int = 150
 @export var JUMP_FORCE: int = 250
 @export var GRAVITY: int = 900
+var is_dead = false
 var is_moving: bool = false
 var was_in_air : bool = false
 var animation_lock: bool = false
@@ -26,10 +31,17 @@ func _ready():
 	anim.play("Idle")  # Start with the "Idle" animation	
 
 func get_input(delta):
+	if is_dead:
+		if Input.is_action_just_pressed("jump"):
+			print("restarting...")
+			get_tree().reload_current_scene()
+			
 	velocity.x = 0
 
 	var input = Vector2.ZERO
 	input.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	
+	
 	
 	if input.x != 0:
 		velocity.x = input.x * SPEED
@@ -76,6 +88,8 @@ func get_input(delta):
 
 func _physics_process(delta):
 	
+	
+	
 	get_input(delta)
 	
 	direction = Input.get_axis("move_left", "move_right")
@@ -115,3 +129,9 @@ func hit():
 		knockback_value = 500
 	
 	_hit(Vector2(knockback_value,-30))
+
+func die():
+	print("Player died")
+	is_dead = true
+	death_sound.play()
+	collision_shape.set_deferred("disabled", true)

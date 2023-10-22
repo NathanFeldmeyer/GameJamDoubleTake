@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var game_over = $UI/GameOver
 @onready var level_completed = $UI/LevelCompleted
 @onready var heartscontainer = $UI/hearts_container
 @onready var acorncontainer = $UI/acorn_container
@@ -13,14 +14,26 @@ func _ready():
 	acorncontainer.set_max_acorns(Collectable.max_acorns)
 	acorncontainer.update_acorns(Collectable.acorns)
 	Collectable.acornsChanged.connect(acorncontainer.update_acorns)
+	
 	RenderingServer.set_default_clear_color(Color.DARK_SLATE_BLUE)
+	
 	Events.level_completed.connect(show_level_completed)
 	Events.use_timer.connect(set_timer)
 	Events.timer_stop.connect(timer_idle)
 	Events.player_hit.connect(player_is_hit)
+	Events.game_over.connect(show_game_over)
+	# player.player_died.connect(_on_player_died)
 	
 func show_level_completed():
 	level_completed.show()
+
+func show_game_over():
+	player.die()
+	game_over.show()
+	
+# func _on_player_died():
+# 	show_game_over()
+# 	emit_signal("game_over")
 
 func set_timer():
 	timer.tick()

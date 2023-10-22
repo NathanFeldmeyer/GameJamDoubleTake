@@ -70,7 +70,7 @@ position = Vector2(-1, 5)
 polygon = PackedVector2Array(-21, -2, -16, -4, -9, -12, 3, -12, 8, -2, 8, 7, -21, 7, -23, 5, -23, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-20, 3, -16, 2, -9, -6, 1, -6, 6, 4, 6, 11, -22, 11, -23, 10, -23, 6)
+polygon = PackedVector2Array(-20, 3, -16, 2, -9, -6, 1, -6, 6, 4, 3, 16, -18, 16, -23, 10, -23, 6)
 
 [node name="oof" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_831yi")

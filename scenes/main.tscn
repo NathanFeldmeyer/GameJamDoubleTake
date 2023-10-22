@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dhvjs30pt72rq"]
+[gd_scene load_steps=22 format=3 uid="uid://dhvjs30pt72rq"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7d8kx"]
 [ext_resource type="PackedScene" uid="uid://crpem6jmtm72h" path="res://scenes/player.tscn" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeyjn03443p7" path="res://assets/background/bg-160px-houses.png" id="5_ah076"]
 [ext_resource type="PackedScene" path="res://scenes/acorn_container.tscn" id="5_l1d32"]
 [ext_resource type="FontFile" uid="uid://crvxl8roi54c2" path="res://assets/Early GameBoy.ttf" id="6_o0uhr"]
+[ext_resource type="PackedScene" uid="uid://del3pm6tfjkpf" path="res://scenes/game_over.tscn" id="6_pcg0d"]
 [ext_resource type="AudioStream" uid="uid://c6qsxakvf6kwv" path="res://assets/music/music4game.mp3" id="7_0gdfl"]
 [ext_resource type="PackedScene" uid="uid://ce82qor6grhwv" path="res://scenes/acorn.tscn" id="8_3nx16"]
 [ext_resource type="Texture2D" uid="uid://555d8sxotqf6" path="res://assets/tree_stump_top.png" id="8_5uum8"]
@@ -276,6 +277,9 @@ offset_left = 22.0
 offset_top = 14.0
 offset_right = 62.0
 offset_bottom = 40.0
+
+[node name="GameOver" parent="UI" instance=ExtResource("6_pcg0d")]
+visible = false
 
 [node name="player" parent="." instance=ExtResource("2")]
 position = Vector2(160, 121)
